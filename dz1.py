@@ -3,13 +3,13 @@
 
 import os
 
-def parse_file_path(file_path):
+def file_path_parser(file_path):
     path, file = os.path.split(file_path)
-    name, extension = os.path.splitext(file)
-    return (path, name, extension)
+    name, ext = os.path.splitext(file)
+    return (path, name, ext)
 
 
-path, name, extension = parse_file_path('/Users/UserName/Desktop/example.py')
+path, name, ext = file_path_parser('Python/Advanced/Homework/test.py')
 print(f'Path: {path}')
 print(f'Name: {name}')
-print(f'Extension: {extension}')
+print(f'Ext: {ext}')
